@@ -1,0 +1,114 @@
+.start-screen {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.start-screen__player-selection {
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    background-color: var(--clr-semi-dark-navy);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.start-screen__text {
+    font-size: var(--size-base);
+
+    background-color: inherit;
+    color: var(--clr-silver);
+    font-weight: bold;
+}
+
+.start-screen__mark-options {
+    display: flex;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.start-screen__mark-label {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-dark-navy);
+    padding: 1rem;
+    position: relative;  /* Bezugspunkt .start-screen__mark-input */
+    border-radius: 10px;
+}
+
+.start-screen__mark-input {
+    /* input überstreckt sich über das gesamte Feld, während das SVG-Symbol sichtbar bleibt */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.start-screen__mark-label:has(.start-screen__mark-input:checked) {
+    background-color: var(--clr-silver);
+}
+
+.start-screen__mark-label:has(.start-screen__mark-input:checked)>svg {
+    fill: var(--clr-dark-navy);
+}
+
+.start-screen__reminder {
+    background-color: inherit;
+    color: var(--clr-silver);
+    font-weight: lighter;
+    font-size: var(--size-xs);
+}
+
+.start-screen__game-mode {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.start-screen__game-mode-btn {
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.start-screen__game-mode-btn-cpu {
+    background-color: var(--clr-light-yellow);
+}
+.start-screen__game-mode-btn-cpu:hover {
+    background-color: var(--clr-light-yellow-hover);
+}
+
+.start-screen__game-mode-btn-player {
+    background-color: var(--clr-light-blue);
+}
+.start-screen__game-mode-btn-player:hover {
+    background-color: var(--clr-light-blue-hover);
+}
+
+
+
+
+
+/* sm */
+@media (min-width: 640px) {
+    .start-screen {
+        width: 600px;
+    }
+}
+
+/* md */
+/*@media (min-width: 768px) { }*/
+
+/* lg */
+/*@media (min-width: 1024px) { }*/
+
+/* xl */
+/*@media (min-width: 1280px) { }*/
+
+/* 2xl */
+/*@media (min-width: 1536px) { }*/
